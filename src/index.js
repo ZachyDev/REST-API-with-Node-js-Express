@@ -9,7 +9,7 @@ app.get('/', (req,res) => {
 
 // endpoints
 app.get('/api/courses', (req,res) => {
-    res.send(['Zachy','Moseti','Rodgers','Nduva']);
+    res.send(['Zachy','Moseti','Rodgers','Nduva','Tech_G']);
 })
 // port variable
 let port = 3000;
