@@ -12,6 +12,6 @@ app.get('/api/courses', (req,res) => {
     res.send(['Zachy','Moseti','Rodgers','Nduva','Tech_G']);
 })
 // port variable
-let port = 3000;
+let port = process.env.PORT || 3000
 // listen to port 3000
 app.listen(port, () => console.log(`Listening to port ${ port }`));
