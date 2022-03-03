@@ -1,0 +1,23 @@
+{
+  "name": "rest-api-with-node-js-express",
+  "version": "1.0.0",
+  "description": "REST API with Node js &amp; Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZachyDev/REST-API-with-Node-js-Express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZachyDev/REST-API-with-Node-js-Express/issues"
+  },
+  "homepage": "https://github.com/ZachyDev/REST-API-with-Node-js-Express#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
