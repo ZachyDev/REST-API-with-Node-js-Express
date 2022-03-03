@@ -11,6 +11,12 @@ app.get('/', (req,res) => {
 app.get('/api/courses', (req,res) => {
     res.send(['Zachy','Moseti','Rodgers','Nduva','Tech_G']);
 })
+
+// route parameters
+app.get('/api/posts/:year/:month', (req,res) => {
+    res.send(req.params)
+})
+
 // port variable
 let port = process.env.PORT || 3000
 // listen to port 3000
