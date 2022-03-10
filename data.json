@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "course": "computer science",
+        "school": "science"
+    },
+    {
+        "id": 2,
+        "course": "acturial science",
+        "school": "science"
+    },
+    {
+        "id": 1,
+        "course": "economics",
+        "school": "business and economics"
+    }
+]

@@ -3,16 +3,15 @@ const express = require('express');
 // initialize  express app
 const app = express();
 
-let courses = [
-    { id: 1, name: 'comp scie' },
-    { id: 2, name: 'medicine'},
-]
 app.get('/', (req,res) => {
     res.send('Hello world');
 })
 
+// import data from data.json
+const courses = require('./data.json');
+
 // endpoints
-app.get('/api/users/:id', (req,res) => {
+app.get('/api/users/', (req,res) => {
     res.send(['Zachy','Moseti','Rodgers','Nduva','Tech_G']);
 })
 
@@ -21,18 +20,9 @@ app.get('/api/posts/:year/:month', (req,res) => {
     res.send(req.params)
 })
 
-// querying using id
-app.get('/api/courses/:id', (req,res) => {
-    let course = courses.find(c => c.id === parseInt(req.params.id));
-
-    if (!course) {
-        res.status(404).send('The requested course with given ID was not found');
-    }
-    else {
-        res.send(course)
-    }
+app.get('/api/courses', (req,res) => {
+    res.send(courses);
 })
-
 
 // port variable
 let port = process.env.PORT || 3000
