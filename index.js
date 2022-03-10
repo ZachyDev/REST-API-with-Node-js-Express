@@ -1,14 +1,17 @@
 const express = require('express');
+const res = require('express/lib/response');
 
 // initialize  express app
 const app = express();
 
+// import data.json
+const courses = require('./data.json');                                                                                                                                                                
 app.get('/', (req,res) => {
     res.send('Hello world');
 })
 
 // import data from data.json
-const courses = require('./data.json');
+// const courses = require('./data.json');
 
 // endpoints
 app.get('/api/users/', (req,res) => {
@@ -20,8 +23,12 @@ app.get('/api/posts/:year/:month', (req,res) => {
     res.send(req.params)
 })
 
-app.get('/api/courses', (req,res) => {
-    res.send(courses);
+// fetch using id
+app.get('/api/courses/:id', (req,res) => {
+    let course = courses.find(c => c.id === parseInt(req.params.id));
+
+    if ( !course ) res.status(404).send('The program with the given ID cannot be found');
+    res.send( course );
 })
 
 // port variable
